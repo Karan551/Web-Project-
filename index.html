@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GYM WEBSITE</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- To link google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:ital,wght@1,100&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header class="container">
+        <div class="left">
+            <!-- this is logo of the gym website. -->
+            <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z3ltJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+                alt="GYM Logo" />
+
+            <!-- this content will display by the autoType feature. -->
+            <!-- <div class="typewriter-content">Master's GYM</div> -->
+            <div><span><strong class="autoType"></strong></span></div>
+        </div>
+        <div class="mid">
+            <nav>
+                <ul class="nav-bar">
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link" id="register">Register Us</a></li>
+                    <li><a href="#" class="nav-link">Contact Us</a></li>
+                    <li><a href="#" class="nav-link">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right">
+            <button class="btn"><a href="#" class="link">Help</a></button>
+            <button class="btn"><a href="#" class="link">Call Us</a></button>
+        </div>
+    </header>
+    <!-- this is registration form -->
+    <div class="form-container">
+        <div class="content">
+            <h1>Registration Form</h1>
+            <form action="" method="post">
+                <input type="text" placeholder="Enter your name:" required name="user_name" id="user_name" />
+                <input type="text" placeholder="Enter your gender:" name="gender" id="gender-name" required
+                    oninput="this.value=this.value.toUpperCase()" />
+                <input type="tel" placeholder="Enter your contact number:" required name="contact_num" maxlength="10"
+                    id="contact-num" />
+                <input type="email" placeholder="Enter your email:" required name="email" />
+                <input type="text" placeholder="Enter your locaility:" required name="location" />
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- To link script file -->
+    <script src="./script.js"></script>
+    <!-- This script file is used to create a typewriter effect. typed js library is used to do this. -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        let typed = new Typed('.autoType', {
+            strings: ["Welcome To Master's GYM"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true,                            
+        });
+    </script>
+</body>
+
+</html>
